@@ -1,0 +1,59 @@
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &-title {
+        color: $color-heading;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        letter-spacing: 0.03em;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    &-item {
+        display: flex;
+        flex-wrap: wrap;
+
+    @media screen and(min-width: 1200px) {
+      flex-wrap: nowrap;  
+    }
+    }
+
+    &-company {
+        margin: 15px;
+
+        &:hover .clients-logo,
+        &:focus .clients-logo {
+            fill: $color-hover;
+            border-color: $color-hover;
+        }
+
+    @media screen and(max-width: 767px) {
+    width: calc((100% - 2 * 30px) / 2);
+    }
+
+     @media screen and(min-width: 767px) and (max-width: 1199px) {
+            width: calc((100% - 3 * 30px) / 3);
+        }
+
+    @media screen and(min-width: 1200px) {
+      width: 170px;  
+    }
+    }
+
+    &-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        fill: #afb1b8;
+        height: 90px;
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+        transition-property: border-color, fill;
+        transition-duration: $duration;
+        transition-timing-function: $transmition-cubic;
+    }
+}
